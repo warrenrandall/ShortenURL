@@ -1,0 +1,29 @@
+﻿@model Payroc_ShortenURL.Models.URLSModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <p class="lead">Payroc URL shortener</p>
+</div>
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Please enter the full URL, below:</h2>
+        <input type="text" name="LongURL"
+               value="@Request.Form["LongURL"]" />
+        </div>
+        <div class="col-md-4">
+            <h2>Please press the button, below, to shorten the URL:</h2>
+            <button name="shorten" type="submit" class="btn btn-default" style="width:100%; background-color:aquamarine;">Shorten</button>
+        </div>
+        <div class="col-md-4">
+            <h2>The Shortened URL is below:</h2>
+            <!--  <input type="text" name="shortURL"
+             value="@Request.Form["shortURL"]" />-->
+            @Html.TextBox("shortURL", (string)ViewBag.ShortURL)
+        </div>
+    </div>
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroc ShortenURL", "Payroc ShortenURL.csproj", "{03139080-69F2-4EEE-A70A-D0F8F2C60F81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03139080-69F2-4EEE-A70A-D0F8F2C60F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03139080-69F2-4EEE-A70A-D0F8F2C60F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03139080-69F2-4EEE-A70A-D0F8F2C60F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03139080-69F2-4EEE-A70A-D0F8F2C60F81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {262CE400-9314-4B89-8B92-A6339A499CA4}
+	EndGlobalSection
+EndGlobal
