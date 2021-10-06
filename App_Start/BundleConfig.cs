@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Payroc_ShortenURL
+namespace ShortenURL
 {
     public class BundleConfig
     {

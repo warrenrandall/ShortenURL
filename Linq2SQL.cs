@@ -1,4 +1,4 @@
-namespace Payroc_ShortenURL
+namespace ShortenURL
 {
     partial class URL
     {

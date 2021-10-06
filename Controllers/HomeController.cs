@@ -1,12 +1,12 @@
-﻿using Payroc_ShortenURL.Data_Access_Layer;
-using Payroc_ShortenURL.Models;
+﻿using ShortenURL.Data_Access_Layer;
+using ShortenURL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Payroc_ShortenURL.Controllers
+namespace ShortenURL.Controllers
 {
     public class HomeController : Controller
     {

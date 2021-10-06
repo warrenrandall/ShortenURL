@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Payroc_ShortenURL
+namespace ShortenURL
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;

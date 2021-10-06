@@ -1,29 +1,54 @@
-﻿@model Payroc_ShortenURL.Models.URLSModel
+﻿@model ShortenURL.Models.URLSModel
 
 @{
     ViewBag.Title = "Home Page";
 }
 
+
 <div class="jumbotron">
-    <p class="lead">Payroc URL shortener</p>
+    <p class="lead">Shorten URL - prototype web app</p>
 </div>
 @using (Html.BeginForm("Index", "Home", FormMethod.Post))
 {
     <div class="row">
         <div class="col-md-4">
-            <h2>Please enter the full URL, below:</h2>
-        <input type="text" name="LongURL"
-               value="@Request.Form["LongURL"]" />
+            <h3>Please enter the full URL, below:</h3>
+            <br />
+            <input type="text" name="LongURL" id="long" style="margin-top: 10px; width: 100%;"
+                   value="@Request.Form["LongURL"]" />
+            <input type="button" value="clear" class="btn btn-sm btn-primary" id="btnClear" />
         </div>
         <div class="col-md-4">
-            <h2>Please press the button, below, to shorten the URL:</h2>
-            <button name="shorten" type="submit" class="btn btn-default" style="width:100%; background-color:aquamarine;">Shorten</button>
+            <h3>Please press the button, below, to shorten the URL:</h3>
+            <button name="shorten" type="submit" class="btn btn-default" id="shorten" style="width:50%; background-color:aquamarine;">Shorten</button>
         </div>
         <div class="col-md-4">
-            <h2>The Shortened URL is below:</h2>
+            <h3>The Shortened URL is below:</h3>
             <!--  <input type="text" name="shortURL"
-             value="@Request.Form["shortURL"]" />-->
-            @Html.TextBox("shortURL", (string)ViewBag.ShortURL)
+            value="@Request.Form["shortURL"]" />-->
+            <br />
+            @Html.TextBox("shortURL", (string)ViewBag.ShortURL, htmlAttributes: new {id ="short", style = "margin-top: 10px; width: 100%;" })
+
         </div>
     </div>
+    <p id="Error" style="color:red;"></p>
 }
+@Scripts.Render("~/bundles/jquery")
+<script>
+    $(function () {
+        $("#btnClear").click(function () {
+            $('#long').val('');
+            $('#short').val('');
+        });
+        $('#shorten').click(function (event) {
+            event.preventDefault();
+            if ($('#long').val().length > 900) {
+                $('#Error').html("Please use a URL shorter than 900 characters.");
+            } else {
+                $('#Error').css('color', 'white');
+                $("#shorten").unbind('click').click();
+            }
+        });
+
+    });
+</script>
