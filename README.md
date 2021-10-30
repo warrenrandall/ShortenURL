@@ -11,7 +11,7 @@ Setting up on a localhost
 -------------------------
 
 Please use your own connectionstring settings for the web.config file.
-Run the provided "Create database and tables.sql" query within MS SQL management Studio when connected to your DB instance.
+Run the provided "Create database and tables.sql" query within MS SQL management Studio when connected to your DB instance. (The file is in the folder that can be downloaded from GitHub. You won't see it in Visual Studio, only in the extracted folder.)
 This creates the database and table required.
 
 
@@ -28,5 +28,5 @@ Although testing it locally forces the domain name to be: localhost:(portnumber)
 How to use the Web App
 ----------------------
 
-Once the solution is loaded in Visual Studio Community Edition 2019 run it and you will be presented with a text field to enter the long URL of another site, a button (to shortern) and the output field on the right. There is also a clear button.
+Once the solution is loaded in Visual Studio Community Edition 2019 run it (this may require a Clean Solution, Rebuild or Build before running) and you will be presented with a text field to enter the long URL of another site, a button (to shortern) and the output field on the right. There is also a clear button.
 Copy the short URL, open a new tab on your browser, paste it into the address bar and the browser will redirect to the full URL.
